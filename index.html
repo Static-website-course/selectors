@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        width : 95%;
+    }
+    div {
+        height: 100%;
+        padding : 20px ;
+        margin : 2px;
+    }
+    .main{
+        border : 6px solid rgb(185, 34, 60);
+    }
+    .main div:first-child{
+        background-color: rgb(71, 110, 119);
+        color : white
+    }
+    .main div:nth-child(2) {
+        border : 3px solid green;
+    }
+    
+    .main div:nth-child(2) ~ div {
+        background-color: lightblue;
+    }
+    .main div:nth-child(2) + div {
+        border : 5px dashed hotpink;
+    }
+    .same{
+        border : 5px dashed rebeccapurple;
+    }
+    .main div:last-child{
+        /* border : 5px dashed goldenrod; */
+    }
+    p.same{
+        background :rgb(90, 218, 118);
+        color : white;
+        padding: 20px;
+    }
+    #uniqe{
+         color :rgb(185, 34, 60);
+        font-style: italic;
+        text-transform: uppercase;
+    }
+</style>
+<body>
+    <h1>The Selectors Lesson</h1>
+    <div class='main'>
+        <div>The first div</div>
+        <div>The seconde div
+            <div> first innet div</div>
+            <div> second innet div</div>
+        </div>
+        <div id='uniqe'>
+            uniqe
+        </div>
+        <div class='same'> Red </div>
+        <div class='same'> blue </div>
+        <p class='same'>paragrph</p>
+        <div>
+            this is the last div
+        </div>
+    </div>
+</body>
+</html>
